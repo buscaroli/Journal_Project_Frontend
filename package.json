@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "dev": "concurrently \"watchify ./static/js/index.js -o bundle.js\" \"python -m http.server 8000\"",
+    "dev": "concurrently \"watchify ./static/js/index.js -o bundle.js\" \"http-server\"",
     "bundle": "watchify ./static/js/index.js -o bundle.js",
     "test": "jest --watchAll",
     "coverage": "jest --coverage --silent"
@@ -32,5 +32,8 @@
     "node-fetch": "^3.2.4",
     "supertest": "^6.2.3",
     "watchify": "^4.0.0"
+  },
+  "dependencies": {
+    "http-server": "^14.1.0"
   }
 }
